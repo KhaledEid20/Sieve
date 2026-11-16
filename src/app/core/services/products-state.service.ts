@@ -27,6 +27,7 @@ export class ProductsStateService {
     }))
 
     CategoryFilter = computed(()=>({
+        search : this.search(),
         category : this.category(),
         sort: this.sort(),
         orderby: this.orderby()
@@ -68,6 +69,9 @@ export class ProductsStateService {
     }
     setOrderBy(orderby:string){
         this.orderby.set(orderby);
+    }
+    setSearch(query:string){
+        this.search.set(query);
     }
 
 }
