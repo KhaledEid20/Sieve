@@ -1,9 +1,64 @@
-@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
-@theme{
-    --color-main-color : #b8a995;
+@theme {
+    --color-main-color: #b8a995;
+}
+
+:root {
+    color-scheme: light;
+    --color-main-color: #b8a995;
+
+    --color-heading: #302b25;
+    --color-body: #6d665e;
+    --color-body-subtle: #81796f;
+
+    --color-neutral-primary: #fffdfa;
+    --color-neutral-primary-soft: #fffdfa;
+    --color-neutral-primary-medium: #fffdfa;
+    --color-neutral-secondary-soft: #f8f5f0;
+    --color-neutral-secondary: #f8f5f0;
+    --color-neutral-secondary-medium: #f3efe8;
+    --color-neutral-tertiary: #ece6dc;
+
+    --color-brand-softer: #f3eee7;
+    --color-brand-soft: #e9e0d5;
+    --color-brand: #87745f;
+    --color-brand-medium: #d7cbbb;
+    --color-brand-strong: #6e5c48;
+    --color-brand-subtle: #ded4c7;
+    --color-brand-light: #a18d76;
+
+    --color-default: #e7e0d6;
+    --color-default-medium: #d9d0c4;
+    --color-default-strong: #c9bdad;
+    --color-muted: #f8f5f0;
+    --color-light: #f1ece4;
+}
+
+html {
+    min-width: 320px;
+    min-height: 100%;
+    background: #f8f5f0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 50% 0, rgb(184 169 149 / 12%), transparent 42rem),
+        #f8f5f0;
+    color: var(--color-heading);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select {
+    font: inherit;
 }

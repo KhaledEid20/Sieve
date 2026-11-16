@@ -1,0 +1,27 @@
+:host {
+    display: block;
+    min-height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+    padding-block: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+@media (max-width: 639px) {
+    main {
+        display: block;
+        padding-inline: 1rem;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 850px) {
+    main {
+        grid-template-columns: minmax(13rem, 14rem) minmax(0, 1fr);
+        gap: 1rem;
+        padding-inline: 1rem;
+    }
+}

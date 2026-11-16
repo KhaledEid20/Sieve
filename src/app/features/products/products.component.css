@@ -1,0 +1,50 @@
+:host {
+    display: block;
+    min-width: 0;
+}
+
+:host > section {
+    min-width: 0;
+}
+
+:host ul {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+:host article {
+    border-color: var(--color-default);
+    background: rgb(255 253 250 / 96%);
+    box-shadow: 0 8px 24px rgb(75 60 43 / 5%);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+:host article:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-brand-medium);
+    box-shadow: 0 16px 34px rgb(75 60 43 / 10%);
+}
+
+:host article > div:first-child {
+    background: var(--color-neutral-secondary-medium);
+}
+
+:host article button {
+    transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+:host article button[class*="bg-brand"] {
+    color: #fffdfa;
+    box-shadow: 0 5px 12px rgb(110 92 72 / 18%);
+}
+
+:host article button[class*="bg-brand"]:hover {
+    box-shadow: 0 7px 16px rgb(110 92 72 / 24%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :host article,
+    :host article button {
+        transition-duration: 0.01ms;
+    }
+}

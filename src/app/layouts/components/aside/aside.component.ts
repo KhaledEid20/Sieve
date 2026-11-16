@@ -29,7 +29,6 @@ export class AsideComponent implements OnInit{
       // }
       this.productState.setOrderBy(v.sort?.order ?? "");
       this.productState.setSortBy(v.sort?.sortBy ?? "");
-      console.log(v.sort?.order , v.sort?.sortBy)
     })
   }
 

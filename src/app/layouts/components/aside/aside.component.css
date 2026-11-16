@@ -1,0 +1,33 @@
+:host {
+    display: block;
+    min-width: 0;
+}
+
+@media (min-width: 640px) {
+    aside#logo-sidebar {
+        position: static !important;
+        inset: auto !important;
+        z-index: auto !important;
+        width: 100% !important;
+        max-width: 16rem;
+        height: auto !important;
+        transform: none !important;
+        align-self: start;
+        transition: none;
+    }
+
+    aside#logo-sidebar > div {
+        height: auto !important;
+        overflow: visible !important;
+        border-color: var(--color-default);
+        background: rgb(255 253 250 / 92%);
+        box-shadow: 0 12px 32px rgb(75 60 43 / 6%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    aside#logo-sidebar,
+    button[data-drawer-toggle="logo-sidebar"] {
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,48 @@
+:host {
+    display: block;
+}
+
+nav {
+    z-index: 60 !important;
+    border-color: var(--color-default);
+    background: rgb(255 253 250 / 94%);
+    box-shadow: 0 4px 18px rgb(75 60 43 / 4%);
+    backdrop-filter: blur(14px);
+}
+
+nav > div {
+    min-height: 4.5rem;
+}
+
+nav form {
+    flex: 1 1 28rem;
+    min-width: 0;
+    max-width: 28rem;
+    margin-inline-start: auto;
+}
+
+nav form > div {
+    max-width: none;
+}
+
+nav input {
+    border-color: var(--color-default-medium);
+    background: var(--color-neutral-secondary-soft);
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+nav input:focus {
+    background: var(--color-neutral-primary);
+    box-shadow: 0 0 0 3px rgb(135 116 95 / 18%);
+}
+
+@media (max-width: 420px) {
+    nav > div {
+        gap: 0.75rem;
+        padding-inline: 1rem;
+    }
+
+    nav form {
+        flex-basis: 10rem;
+    }
+}
